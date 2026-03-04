@@ -613,15 +613,21 @@ download_release() {
         tar -xzf "$TMP/$archive_name" -C "$TMP" 2>/dev/null || return 1
     fi
 
-    # Find binary (may be at top level or in a subdirectory)
+    # Find binary — may be named exactly $BINARY_NAME or with version/platform
+    # suffix (e.g., franken_whisper-0.1.0-linux_amd64)
     local bin=""
-    if [ -x "$TMP/$BINARY_NAME" ]; then
+    local versioned_name="${BINARY_NAME}-${ver_no_v}-${platform}"
+    if [ -f "$TMP/$BINARY_NAME" ]; then
         bin="$TMP/$BINARY_NAME"
+    elif [ -f "$TMP/$versioned_name" ]; then
+        bin="$TMP/$versioned_name"
     else
-        bin=$(find "$TMP" -name "$BINARY_NAME" -type f 2>/dev/null | head -1)
+        # Search for any file starting with the binary name
+        bin=$(find "$TMP" -name "${BINARY_NAME}*" -type f ! -name "*.txt" ! -name "*.md" ! -name "*.tar.*" ! -name "*.zip" ! -name "*.part" 2>/dev/null | head -1)
     fi
 
     if [ -z "$bin" ] || [ ! -f "$bin" ]; then
+        log_error "Binary not found after extraction (looked for $BINARY_NAME and $versioned_name)"
         return 1
     fi
 
