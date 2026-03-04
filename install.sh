@@ -554,7 +554,9 @@ download_release() {
         url="$ARTIFACT_URL"
         archive_name="$(basename "$ARTIFACT_URL")"
     else
-        archive_name="${BINARY_NAME}-${VERSION}-${platform}.${archive_ext}"
+        # Assets use version without 'v' prefix (e.g., 0.1.0 not v0.1.0)
+        local ver_no_v="${VERSION#v}"
+        archive_name="${BINARY_NAME}-${ver_no_v}-${platform}.${archive_ext}"
         url="https://github.com/${OWNER}/${REPO}/releases/download/${VERSION}/${archive_name}"
     fi
 
